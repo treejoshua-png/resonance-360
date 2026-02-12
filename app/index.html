@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resonance 360 | MVP Blueprint</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Resonance 360</p>
+        <h1>Executive 360 Feedback + AI Coaching</h1>
+        <p>
+          Prototype workspace for leadership assessments with weighted multi-rater scoring,
+          self-overlay radar visuals, qualitative synthesis, and action-oriented development planning.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>1) Assessment setup</h2>
+        <ul>
+          <li>Rater groups: Line Manager/Sponsor, Peers, Direct Reports, Key Stakeholders.</li>
+          <li>Raters self-select relationship at response time.</li>
+          <li>Invite flow: email invite + automatic 5-day reminder chase.</li>
+          <li>Confidentiality: no attributable comments; group display requires ≥2 responses.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>2) Weighted scorecard (7-point scale)</h2>
+        <p>Group weighting: Manager 30%, Peers 25%, Direct Reports 25%, Stakeholders 20%. Self score appears only as comparison overlay.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Competency</th>
+              <th>Multi-rater</th>
+              <th>Self</th>
+              <th>Delta</th>
+            </tr>
+          </thead>
+          <tbody id="scoreRows"></tbody>
+        </table>
+      </section>
+
+      <section class="card chart-wrap">
+        <h2>3) Dual radar chart</h2>
+        <canvas id="radar" width="620" height="620" aria-label="Radar chart"></canvas>
+      </section>
+
+      <section class="card">
+        <h2>4) Report output blocks</h2>
+        <div class="grid two">
+          <article>
+            <h3>Full Participant Report</h3>
+            <ol>
+              <li>Purpose & Method</li>
+              <li>Executive Summary</li>
+              <li>Scorecard Snapshot</li>
+              <li>Strengths to Amplify</li>
+              <li>Constraints to Address</li>
+              <li>The One Lever</li>
+              <li>Priority for Next 12 Months</li>
+              <li>Development Plan</li>
+              <li>AI Coaching Assistant</li>
+              <li>Appendix</li>
+            </ol>
+          </article>
+          <article>
+            <h3>2-page Line Manager Report</h3>
+            <ol>
+              <li>Executive Summary</li>
+              <li>Scorecard Snapshot</li>
+              <li>Strengths to Amplify</li>
+              <li>Constraints to Address</li>
+              <li>One Lever + 90-day plan</li>
+            </ol>
+          </article>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>5) Mandatory theme coding lenses</h2>
+        <div class="lenses">
+          <span>Impact on results</span>
+          <span>Impact on people/relationships</span>
+          <span>Impact on execution</span>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>6) AI coaching boundaries (MVP)</h2>
+        <pre id="boundaries"></pre>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
